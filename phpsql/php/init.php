@@ -5,7 +5,7 @@ require_once __DIR__ . '/db.php';
 
 //CONFIG
 
-$router_pages = ['home', 'contact'];
+$router_pages = ['home', 'contact', 'convert'];
 
 require_once __DIR__ . '/utils/errors.php';
 
