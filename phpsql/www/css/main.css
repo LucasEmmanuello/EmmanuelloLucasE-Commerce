@@ -36,3 +36,19 @@ header{
     height: 30px;
     border-radius: 50px;
 }
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit{
+    border-radius: 50px;
+}
