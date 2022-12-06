@@ -3,8 +3,11 @@ body{
 }
 
 header{
-    display: flex;
     background: linear-gradient(90deg, rgba(157,0,0,1) 10%, rgba(112,0,0,1) 20%, rgba(98,0,0,1) 30%, rgba(58,0,73,1) 50%, rgba(98,0,0,1) 70%, rgba(112,0,0,1) 80%, rgba(157,0,0,1) 90%);
+}
+
+.dis_header{
+    display: flex;
     justify-content: space-around;
     align-items: center;
 }
@@ -16,4 +19,20 @@ header{
 
 .head > h1,h2{
     font-family: cursive;
+}
+
+.recherche{
+    display: flex;
+    justify-content: center;
+}
+
+#search{
+    width: 350px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+#srchb{
+    height: 30px;
+    border-radius: 50px;
 }

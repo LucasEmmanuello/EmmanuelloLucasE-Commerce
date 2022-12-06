@@ -9,11 +9,19 @@
 </head>
 <body>
 <header>
-    <div class="head">
-        <h1>S</h1><h2>econd</h2><h1>S</h1><h2>ouffle</h2>
+    <div class="dis_header">
+        <div class="head">
+            <h1>S</h1><h2>econd</h2><h1>S</h1><h2>ouffle</h2>
+        </div>
+        <div class="button">
+            <a id="log" href="login.php">Login</a>
+            <a id="shop" href="shop.php">🛒</a>
+        </div>
     </div>
-    <div class="button">
-        <a id="log" href="login.php">Login</a>
-        <a id="shop" href="shop.php">Shop</a>
+    <div class="recherche">
+        <form action="../../utils/recherche.php" method="get">
+        <input id="search" type="search" name="search" placeholder="Rechercher..." />
+        <button id="srchb" type="submit">🔍</button>
+        </form>
     </div>
 </header>

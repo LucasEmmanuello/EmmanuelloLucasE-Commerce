@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Admin Contact";
+$pageTitle = "admin_contact";
 
 $all_forms = $contactFormManager->get_all_contact_form();
 

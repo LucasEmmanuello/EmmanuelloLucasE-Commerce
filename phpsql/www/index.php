@@ -4,7 +4,7 @@ require_once __DIR__ . '/../php/init.php';
 
 //ROUTER
 
-$page = "home";
+$page = "login";
 
 if(isset($_GET['p'])){
     if(in_array($_GET['p'], $router_pages)){
