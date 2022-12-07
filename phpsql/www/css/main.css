@@ -54,25 +54,49 @@ header{
     border-radius: 50px;
 }
 
-.login{
+.align{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login > form{
+.align > a{
+    margin: 10px;
+    text-decoration: none;
+    color : #ffffff;
+}
+
+.logreg{
+    width: 500px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(157,0,0,1) 10%, rgba(112,0,0,1) 20%, rgba(98,0,0,1) 30%, rgba(58,0,73,1) 50%, rgba(98,0,0,1) 70%, rgba(112,0,0,1) 80%, rgba(157,0,0,1) 90%);
+}
+
+.logreg > form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px;
+    color : #ffffff;
+}
+
+#inp{
+    width: 200px;
 }
 
 #submit{
+    margin-top: 10px;
     border-radius: 50px;
 }
 
 #retour{
     display: flex;
     justify-content: center;
-    margin: 50px;
+    margin: 25px;
+
 }
 
+#retour > a{
+    color : #ffffff;
+    text-decoration: none;
+}
