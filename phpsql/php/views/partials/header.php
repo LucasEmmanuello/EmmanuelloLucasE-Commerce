@@ -14,12 +14,12 @@
             <h1>S</h1><h2>econd</h2><h1>S</h1><h2>ouffle</h2>
         </div>
         <div class="button">
-            <a id="log" href="login.php">Login</a>
-            <a id="shop" href="shop.php">🛒</a>
+            <a id="log" href="/?page=login">Login</a>
+            <a id="shop" href="/?page=shop">🛒</a>
         </div>
     </div>
     <div class="recherche">
-        <form action="../../utils/recherche.php" method="get">
+        <form action="/actions/recherche.php" method="get">
         <input id="search" type="search" name="search" placeholder="Rechercher..." />
         <button id="srchb" type="submit">🔍</button>
         </form>

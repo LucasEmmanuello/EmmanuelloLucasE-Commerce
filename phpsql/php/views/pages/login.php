@@ -1,11 +1,11 @@
 <?php
-$pageTitle = "login";
+$pageTitle = "Login";
 
 ob_start();
 ?>
 
 <div class = "login">
-    <form action="../../utils/log.php" method="post">
+    <form action="/actions/log.php" method="post">
         <p>Nom: <input type="text" name="nom" /></p>
         <p>Mot de passe: <input type="password" name="mot_de_passe" /></p>
         <input type="hidden" name="type" value="login" />
@@ -13,8 +13,7 @@ ob_start();
         <?php if(isset($_GET['error'])) echo "Pseudo ou MDP incorrect ou inexistant"; ?>
     </form>
     <div id = "retour">
-        <?php $page = "home" ?>
-        <a href="index.php">Retour</a>
+        <a href="/?page=home">Retour</a>
     </div>
 </div>
 

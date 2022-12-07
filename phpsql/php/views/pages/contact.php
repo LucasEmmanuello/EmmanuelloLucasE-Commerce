@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "contact";
+$pageTitle = "Contact";
 
 $error_message = get_error();
 

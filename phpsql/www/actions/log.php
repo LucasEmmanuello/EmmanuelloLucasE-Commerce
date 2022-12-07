@@ -8,12 +8,10 @@ if(isset($_POST['type']) && $_POST['type'] =='login'){
 
         if (count($User) > 0) {
             $_SESSION['USER'] = $User;
-            $pages = "home";
-            header('Location: /index.php');
+            header('Location: /?page=home');
             die();
         }else {
-            $pages = "home";
-            header('Location: /index.php');
+            header('Location: /?page=login&error=1');
         }
     }
 }

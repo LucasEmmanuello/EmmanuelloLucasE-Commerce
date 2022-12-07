@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "home";
+$pageTitle = "Home";
 
 ob_start();
 ?>
