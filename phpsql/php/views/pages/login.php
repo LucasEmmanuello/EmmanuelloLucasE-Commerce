@@ -13,6 +13,11 @@ ob_start();
             <p><input id="submit" type="submit" value="OK"></p>
             <?php if(isset($_GET['error'])) echo "Pseudo ou MDP incorrect ou inexistant"; ?>
         </form>
+        <?php if(isset($_GET['success']) && $_GET['success'] == 2){?>
+            <p>Votre compte à été créer avec succès !</p>
+        <?php } elseif(isset($_GET['success']) && $_GET['success'] == 3){?>
+            <p>Votre demande est en court de traitement. Vous receverez un mail lorsqu'il sera validé.</p>
+        <?php } ?>
         <div id = "retour">
             <a href="/?page=home">Retour</a>
         </div>
