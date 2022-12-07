@@ -22,16 +22,18 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
 }else{
     if(isset($_POST['type']) && $_POST['type'] =='login'){
         if (isset($_POST['nom']) && isset($_POST['mot_de_passe'])) {
-        $datasql = $db->prepare('SELECT * FROM Login WHERE nom = ? AND mot_de_passe = ?');
-        $datasql->execute(array($_POST['nom'], $_POST['mot_de_passe']));
-        $User = $datasql->fetchAll();
-    
+            $datasql = $db->prepare('SELECT * FROM User WHERE Nom = ?');
+            $datasql->execute(array($_POST['nom']));
+            $User = $datasql->fetchAll();
+
             if (count($User) > 0) {
-                $_SESSION['USER'] = $User;
-                header('Location: /?page=home');
-                die();
-            }else {
-                header('Location: /?page=login&error');
+                if(password_verify($_POST['mot_de_passe'],password_hash($_POST["mot_de_passe"], PASSWORD_BCRYPT, [12]))){
+                    $_SESSION['USER'] = $User;
+                    header('Location: /?page=home');
+                    die();
+                }else {
+                    header('Location: /?page=login&error');
+                }
             }
         }
     }
