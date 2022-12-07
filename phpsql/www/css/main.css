@@ -100,3 +100,9 @@ header{
     color : #ffffff;
     text-decoration: none;
 }
+
+#img{
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+}

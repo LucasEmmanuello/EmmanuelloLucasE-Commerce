@@ -36,6 +36,7 @@ ob_start();
             <p>Mot de passe : </p><input id="inp" type="password" name="mot_de_passe"/>          
             <p>Adresse: </p><input id="inp" type="text" name="adresse"/>
             <p>Ville + (Code Postale): </p><input id="inp" type="text" name="ville"/>
+            <p>Carte d'identité</p><input type="file" accept="image/*" />
             <input type="hidden" name="who" value="vendeur"/>
             <input type="hidden" name="type" value="register"/>
             <button id="submit" type="submit">S'inscrire</button>
