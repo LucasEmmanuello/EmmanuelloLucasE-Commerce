@@ -19,10 +19,10 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
     $insert->execute(["Nom" => $nom, "Email" => $email, "Mot_de_passe" => $mdp, "Adresse" => $adresse, "Ville" => $ville, "Utilisation" => $utils]);
 
     header('Location: /?page=login&success='.$utils);
-    
+
 }elseif(isset($_POST['type']) && $_POST['type'] =='login'){
     if (isset($_POST['nom']) && isset($_POST['mot_de_passe'])) {
-        $datasql = $db->prepare('SELECT * FROM User WHERE Nom = ?');
+        $datasql = $db->prepare('SELECT * FROM User WHERE Nom = "'.$_POST['nom'].'"');
         $datasql->execute(array($_POST['nom']));
         $User = $datasql->fetchAll();
 
@@ -30,6 +30,11 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
             if(password_verify($_POST['mot_de_passe'],password_hash($_POST["mot_de_passe"], PASSWORD_BCRYPT, [12]))){
                 $panier = $db->prepare('CREATE TABLE Panier (Position_article INT NOT NULL AUTO_INCREMENT,id_article INT NOT NULL,PRIMARY KEY (Position_article)) ENGINE = InnoDB;');
                 $panier->execute();
+                foreach($User as $Utils){
+                    if($Utils['Nom'] == $_POST['nom']){
+                        $_SESSION['User'] = $Utils['Utilisation'];
+                    }
+                }
                 header('Location: /?page=home&connected');
                 die();
             }

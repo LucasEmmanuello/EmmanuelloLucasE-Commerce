@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Basket";
+$pageTitle = "Panier";
 
 ob_start();
 ?>

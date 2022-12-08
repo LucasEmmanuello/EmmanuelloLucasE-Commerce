@@ -14,8 +14,16 @@
             <h1>S</h1><h2>econd</h2><h1>S</h1><h2>ouffle</h2>
         </div>
         <div class="button">
+        <?php if(isset($_GET['connected'])){?>
+            <a id="log" href="/actions/logout.php">Logout</a>
+        <?php }else{?>
             <a id="log" href="/?page=login">Login</a>
+        <?php }
+        if(isset($_SESSION['User']) && $_SESSION['User'] == 2){?>
             <a id="shop" href="/?page=panier">🛒</a>
+        <?php }elseif(isset($_SESSION['User']) && $_SESSION['User'] == 4 || $_SESSION['User'] == 1 ){?>
+            <a id="shop" href="/?page=gestion">⚙️</a>
+        <?php }?>
         </div>
     </div>
     <div class="recherche">
