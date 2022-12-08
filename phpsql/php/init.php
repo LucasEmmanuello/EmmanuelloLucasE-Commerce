@@ -10,7 +10,7 @@ require_once __DIR__ . '/db.php';
 
 //CONFIG
 
-$router_pages = ['home', 'contact', 'convert', 'login', 'register' , 'admin_contact', 'panier', 'product_page'];
+$router_pages = ['home', 'contact', 'login', 'register' , 'admin', 'panier', 'product_page'];
 
 require_once __DIR__ . '/utils/errors.php';
 
