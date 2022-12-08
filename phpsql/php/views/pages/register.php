@@ -48,6 +48,3 @@ ob_start();
     <?php } ?>
     <a href="/?page=login">J'ai déjà un compte !</a>
 </div>
-
-<?php
-$pageContent = ob_get_clean();

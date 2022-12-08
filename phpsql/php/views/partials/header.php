@@ -15,7 +15,7 @@
         </div>
         <div class="button">
             <a id="log" href="/?page=login">Login</a>
-            <a id="shop" href="/?page=basket">🛒</a>
+            <a id="shop" href="/?page=panier">🛒</a>
         </div>
     </div>
     <div class="recherche">

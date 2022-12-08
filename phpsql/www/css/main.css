@@ -48,7 +48,7 @@ header{
     border-radius: 50px;
 }
 
-#srchb{
+#srchb, #submit{
     height: 30px;
     width: 30px;
     border-radius: 50px;
@@ -84,11 +84,6 @@ header{
     width: 200px;
 }
 
-#submit{
-    margin-top: 10px;
-    border-radius: 50px;
-}
-
 #retour{
     display: flex;
     justify-content: center;
@@ -103,6 +98,30 @@ header{
 
 #img{
     display: flex;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 20px;
+}
+
+.vu, #ligne{
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    color: #fff;
+    margin: 30px;
+}
+
+.vu > tbody{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+}
+
+.achat{
+    display: flex;
+    justify-content: space-evenly;
 }

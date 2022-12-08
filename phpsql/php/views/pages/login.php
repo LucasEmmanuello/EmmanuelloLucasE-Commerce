@@ -24,6 +24,3 @@ ob_start();
     </div>
     <a href="/?page=register">Pas de compte ? Créer en un ici !</a>
 </div>
-
-<?php
-$pageContent = ob_get_clean();
