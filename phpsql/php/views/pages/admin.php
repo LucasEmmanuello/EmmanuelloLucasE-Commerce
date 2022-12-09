@@ -23,6 +23,7 @@ ob_start();?>
             <td>" Id Card :"<img id="img" src="'.$vendeur['id_card'].'"/></td>
             </tr>';
         }
+        
         ?>
     </table>
 <?php }else{

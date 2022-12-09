@@ -21,7 +21,7 @@ $catégories -> execute();
 $catégories = $catégories->fetchAll();
 
 if(isset($_POST['search'])){
-    $srch_produit = $db->prepare('SELECT * FROM Produits WHERE Nom ="'.$_POST['search'].'"');
+    $srch_produit = $db->prepare('SELECT * FROM Produits WHERE Nom LIKE "%'.$_POST['search'].'%"');
 
     $srch_produit->execute();
     $srch_produit = $srch_produit->fetchAll();
