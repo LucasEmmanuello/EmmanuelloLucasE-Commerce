@@ -20,7 +20,7 @@ ob_start();
             <p>Ville + (Code Postale): </p><input id="inp" type="text" name="ville"/>
             <input type="hidden" name="who" value="client"/>
             <input type="hidden" name="type" value="register"/>
-            <button id="submit" type="submit">S'inscrire</button>
+            <button id="submit" type="submit">✔️</button>
         </form>
         <div id = "retour">
             <a href="/?page=home">Retour</a>
@@ -36,10 +36,10 @@ ob_start();
             <p>Mot de passe : </p><input id="inp" type="password" name="mot_de_passe"/>          
             <p>Adresse: </p><input id="inp" type="text" name="adresse"/>
             <p>Ville + (Code Postale): </p><input id="inp" type="text" name="ville"/>
-            <p>Carte d'identité</p><input type="file" accept="image/*" />
+            <p>Carte d'identité</p><input type="file" accept="image/*" name="id_card" />
             <input type="hidden" name="who" value="vendeur"/>
             <input type="hidden" name="type" value="register"/>
-            <button id="submit" type="submit">S'inscrire</button>
+            <button id="submit" type="submit">✔️</button>
         </form>
         <div id = "retour">
             <a href="/?page=home">Retour</a>

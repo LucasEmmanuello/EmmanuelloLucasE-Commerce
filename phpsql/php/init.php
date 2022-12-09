@@ -10,6 +10,4 @@ $router_pages = ['home', 'contact', 'login', 'register' , 'admin', 'panier', 'pr
 
 require_once __DIR__ . '/utils/errors.php';
 
-require_once __DIR__ . '/utils/function.php';
-
 require_once __DIR__ . '/sql/contact.sql.php';

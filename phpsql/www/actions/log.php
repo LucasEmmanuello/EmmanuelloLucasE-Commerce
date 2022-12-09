@@ -11,12 +11,14 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
 
     if (isset($_POST['who']) && $_POST['who'] == 'client') {
         $utils = 2;
+        $id_card = "None";
     }elseif (isset($_POST['who']) && $_POST['who'] == 'vendeur') {
         $utils = 3;
+        $id_card = '/img/' . $_POST["id_card"];
     }
 
-    $insert = $db->prepare('INSERT INTO user(Nom, Email, Mot_de_passe, Adresse, Ville, Utilisation) VALUES (:Nom, :Email, :Mot_de_passe, :Adresse, :Ville, :Utilisation)');
-    $insert->execute(["Nom" => $nom, "Email" => $email, "Mot_de_passe" => $mdp, "Adresse" => $adresse, "Ville" => $ville, "Utilisation" => $utils]);
+    $insert = $db->prepare('INSERT INTO user(Nom, Email, Mot_de_passe, Adresse, Ville, Utilisation, id_card) VALUES (:Nom, :Email, :Mot_de_passe, :Adresse, :Ville, :Utilisation, :id_card)');
+    $insert->execute(["Nom" => $nom, "Email" => $email, "Mot_de_passe" => $mdp, "Adresse" => $adresse, "Ville" => $ville, "Utilisation" => $utils, "id_card" => $id_card]);
 
     header('Location: /?page=login&success='.$utils);
 
@@ -35,7 +37,7 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
                         $_SESSION['User'] = $Utils['Utilisation'];
                     }
                 }
-                header('Location: /?page=home&connected');
+                header('Location: /?page=home');
                 die();
             }
         }else {

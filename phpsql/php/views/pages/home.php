@@ -32,7 +32,7 @@ for ($i = 0; $i <= 3; $i++){?>
             foreach($produits as $produit) {
                 $id_article = $produit['Id_produit'];
                 echo '<tr><td><a href="/?page=produits&id='.$id_article.'"><img id="img" src="'.$produit['Url_img'].'"/></a></td>
-                <td><div class="achat"><form method="post"><p><input id="submit" type="submit" value="🛒" name="'.$id_article.'"></form></p><p>'.$produit['Prix'].'</p></div></td></tr>';
+                <td><div class="achat"><a id="othbut" href="/?page=panier&id='. $id_article .'">🛒</a><p>'.$produit['Prix'].'</p></div></td></tr>';
             }
         }
         ?>

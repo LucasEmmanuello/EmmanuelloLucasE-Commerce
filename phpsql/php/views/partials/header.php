@@ -14,22 +14,22 @@
             <h1>S</h1><h2>econd</h2><h1>S</h1><h2>ouffle</h2>
         </div>
         <div class="button">
-        <?php if(isset($_GET['connected'])){?>
+        <?php if(isset($_SESSION['User'])){?>
             <a id="log" href="/actions/logout.php">Logout</a>
         <?php }else{?>
             <a id="log" href="/?page=login">Login</a>
         <?php }
         if(isset($_SESSION['User']) && $_SESSION['User'] == 2){?>
             <a id="shop" href="/?page=panier">🛒</a>
-        <?php }elseif(isset($_SESSION['User']) && $_SESSION['User'] == 4 || $_SESSION['User'] == 1 ){?>
+        <?php }elseif(isset($_SESSION['User']) && $_SESSION['User'] == 4 || isset($_SESSION['User']) && $_SESSION['User'] == 1 ){?>
             <a id="shop" href="/?page=gestion">⚙️</a>
         <?php }?>
         </div>
     </div>
     <div class="recherche">
-        <form action="/actions/recherche.php" method="get">
-        <input id="search" type="search" name="search" placeholder="Rechercher..." />
-        <button id="srchb" type="submit">🔍</button>
+        <form action="/actions/recherche.php" method="post">
+            <input id="search" type="search" name="search" placeholder="Rechercher..." />
+            <button id="srchb" type="submit">🔍</button>
         </form>
     </div>
 </header>

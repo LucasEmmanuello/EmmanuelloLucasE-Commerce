@@ -2,6 +2,6 @@
 
 require_once __DIR__ . "/../../php/init.php";
 
-unset($_SESSION['User']);
+session_unset();
 
-header('Location : ?/page=home');
+header('Location : /?page=home');
