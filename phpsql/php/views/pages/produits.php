@@ -80,11 +80,16 @@ if(isset($_GET['gestion'])){?>
 }
 
 if(isset($_GET['suppression'])){?>
-    <p>êtes vous sur de vouloir supprimer cette article.</p>
-    <form method="post">
-        <input type="hidden" name="del"/>
-        <button id="submit" type="submit">Oui.</button>
-    </form>
+    <div id="align">
+        <p>êtes vous sur de vouloir supprimer cette article.</p>
+        <form method="post">
+            <input type="hidden" name="del"/>
+            <button id="submit" type="submit">Oui.</button>
+        </form>
+        <div id = "retour">
+                <a href="/?page=home">Retour</a>
+        </div>
+        </div>
     
 <?php }
     }else{?>
