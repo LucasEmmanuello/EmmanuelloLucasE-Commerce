@@ -27,9 +27,9 @@
         </div>
     </div>
     <div class="recherche">
-        <form action="/actions/recherche.php" method="post">
+        <form method="post">
             <input id="search" type="search" name="search" placeholder="Rechercher..." />
-            <button id="srchb" type="submit">🔍</button>
+            <button id="srchb" type="submit" >🔍</button>
         </form>
     </div>
 </header>

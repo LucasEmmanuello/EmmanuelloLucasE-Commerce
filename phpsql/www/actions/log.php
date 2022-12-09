@@ -14,7 +14,7 @@ if(isset($_POST['type']) && $_POST['type'] =='register'){
         $id_card = "None";
     }elseif (isset($_POST['who']) && $_POST['who'] == 'vendeur') {
         $utils = 3;
-        $id_card = '/img/' . $_POST["id_card"];
+        $id_card = $_POST["id_card"];
     }
 
     $insert = $db->prepare('INSERT INTO user(Nom, Email, Mot_de_passe, Adresse, Ville, Utilisation, id_card) VALUES (:Nom, :Email, :Mot_de_passe, :Adresse, :Ville, :Utilisation, :id_card)');

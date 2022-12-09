@@ -27,9 +27,8 @@ ob_start();
         $catégories->execute();
         $catégories = $catégories->fetchAll();
 
-        for ($i = 0; $i <= 3; $i++) { ?>
-            <table class = "vu">
-            <?php
+        for ($i = 0; $i <= 3; $i++) { 
+            ?><table class = "vu"><?php
             if ($catégories[$i][0]) {
                 $produits = $db->prepare('SELECT * FROM Produits WHERE id_catégorie = "' . $catégories[$i][0] . '"');
 
@@ -41,9 +40,7 @@ ob_start();
                     echo '<tr><td><img id="img" src="' . $produit['Url_img'] . '"/></td>
                     <td><div class="achat"><a id="othbut" href="/?page=produits&id='. $id_article .'&gestion">🖋️</a><a id="othbut" href="/?page=produits&id='. $id_article .'&suppression">➖</a><p>' . $produit['Prix'] . '</p></div></td></tr>';
                 }
-            }?>
-            </table>
-        <?php }
-    }?>
+            }
+            ?></table><?php }}
     
    

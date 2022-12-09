@@ -34,6 +34,7 @@ header{
     border-radius: 50px;
     text-decoration: none;
     list-style: none;
+    color:#ffffff
 }
 
 .recherche{
@@ -63,6 +64,7 @@ header{
 .align > a{
     margin: 10px;
     text-decoration: none;
+    color:#ffffff
 }
 
 .logreg{
@@ -86,11 +88,12 @@ header{
     display: flex;
     justify-content: center;
     margin: 25px;
-
+    color:#ffffff
 }
 
 #retour > a{
     text-decoration: none;
+    color:#ffffff
 }
 
 #img{
